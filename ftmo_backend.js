@@ -16,9 +16,13 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY
 );
 
-const anthropic = process.env.ANTHROPIC_API_KEY
-  ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY || '';
+const anthropic = ANTHROPIC_KEY
+  ? new Anthropic({ apiKey: ANTHROPIC_KEY })
   : null;
+
+console.log('ANTHROPIC_KEY presente:', ANTHROPIC_KEY ? 'SIM' : 'NAO');
+console.log('Todas as vars:', Object.keys(process.env).filter(k => !k.includes('npm')).join(', '));
 
 function autenticarRobot(req, res, next) {
   const key = req.headers['x-robot-key'];
