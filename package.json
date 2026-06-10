@@ -2,9 +2,9 @@
   "name": "ftmo-robot-backend",
   "version": "2.0.0",
   "description": "Backend do robo FTMO com IA integrada",
-  "main": "ftmo_backend_v2.js",
+  "main": "ftmo_backend.js",
   "scripts": {
-    "start": "node ftmo_backend_v2.js"
+    "start": "node ftmo_backend.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.0",
