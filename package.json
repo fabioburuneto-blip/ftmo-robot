@@ -1,12 +1,13 @@
 {
   "name": "ftmo-robot-backend",
-  "version": "1.0.0",
-  "description": "Backend do robo FTMO - log de trades e dashboard",
-  "main": "ftmo_backend.js",
+  "version": "2.0.0",
+  "description": "Backend do robo FTMO com IA integrada",
+  "main": "ftmo_backend_v2.js",
   "scripts": {
-    "start": "node ftmo_backend.js"
+    "start": "node ftmo_backend_v2.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
     "@supabase/supabase-js": "^2.43.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.0",
